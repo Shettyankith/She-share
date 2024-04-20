@@ -1,0 +1,98 @@
+<% layout("layouts/boilerplate") %>
+
+<body>
+  <h1 class="cardheading">Edit your <span> Room </span> details</h1>
+    <div class="box height">
+      <div class="img">
+        <img src="<%= data.image.url %>" alt="">
+      </div>
+      <div class="dataintake">
+    <div class="col-12 ">
+      <form
+        action="/posts/<%= data.id %>/edit?_method=PATCH"
+        method="post"
+        novalidate
+        class="needs-validation"
+        
+      >
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input
+            type="text"
+            value="<%= data.title %>"
+            name="title"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">This Looks Good!</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea
+            type="text"
+            name="description"
+            cols="40"
+            required
+            rows="2"
+            class="form-control"
+          >
+<%= data.description %> </textarea
+          >
+          <div class="invalid-feedback">Please enter a short description</div>
+        </div>
+
+       
+        <div class="mb-3">
+          <label for="image" class="form-label">Upload New Image</label>
+          <input
+            type="file"
+            name="image"
+            class="form-control"
+          />
+        </div> 
+
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input
+              type="text"
+              value="<%= data.price %>"
+              name="price"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Price should be valid</div>
+          </div>
+
+          <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country</label>
+            <input
+              type="text"
+              value="<%= data.country %>"
+              name="country"
+              class="form-control"
+              required
+            />
+            <div class="invalid-feedback">Please enter country name</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input
+            type="text"
+            value="<%= data.location %>"
+            name="location"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Please enter location</div>
+        </div>
+
+        <br />
+        <button class="boxbtn">Edit <i class="fa-solid fa-pen-to-square"></i></button>
+      </form>
+    </div>
+  </div>
+</body>

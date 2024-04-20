@@ -1,0 +1,29 @@
+<% layout('layouts/boilerplate') %>
+
+<body>
+  <h1 class="cardheading"><span>She</span> Dashboard</h1>
+  <div class="dashboard">
+  <div class="profilepic">
+    <img src="<%= user.profilePic.url %>" alt="profile pic" />
+    <p><%= user.username %>  <form action="/dashboard/edit" method="get">
+        <button class="editdashboard"><i class="fa-solid fa-user-pen"></i></button></form></p>
+   
+  </div>
+  <div class="userinfo">
+    <h6>Email</h6>
+    <p><%= user.email %></p>
+  </div>
+  <div class="userinfo">
+    <h6>Hobbies</h6>
+    <p><%= user.hobbies %></p>
+  </div>
+  <div class="userinfo">
+    <h6>Age</h6>
+    <p><%= user.age %> years</p>
+  </div>
+  <div class="userinfo">
+    <h6>Story</h6>
+    <p><%= user.story %></p>
+  </div>
+</div>
+</body>

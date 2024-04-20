@@ -1,0 +1,410 @@
+body {
+  background-color: #ecf1f4 !important;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin-top: 5rem;
+  color: #2C3A56;
+}
+
+#preloader{
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/preloader.gif);
+  background-position: center;
+  background-size: 90px;
+  background-repeat: no-repeat;
+}
+/* Home Page */
+
+.intro{
+    margin-top: 5rem;
+    background-image: url("../images/home.jpg");
+    background-size: 1800px auto;
+   background-position: center;
+    max-width: 100%;
+    padding: 6rem;
+    min-height: 90vh;
+}
+
+.intro h1{
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+.intro h1 span{
+  color: #DE195C;
+}
+
+.intro h3{
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.roombuttons{
+  display: flex;
+  align-items: center;
+}
+
+.roombuttons div{
+  padding: 1rem;
+}
+
+.roombuttons div button{
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 2px solid #DE195C;
+  color: #DE195C;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.roombuttons div button:hover{
+  background-color: #DE195C;
+  color: white;
+  border: 1px solid white;
+  font-weight: 700;
+}
+
+
+/* Posts page */
+.card{
+  margin: 1rem;
+  background-color: white;
+  width: 300px;
+  height: 420px;
+  padding: 1rem;
+  border-radius: 30px;
+}
+
+.image{
+  height:60%;
+}
+
+.image img{
+  width: 100%;
+  height: 100%;
+}
+
+.allposts{
+  align-items: center;
+  margin-top: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card div button{
+  border: 2px solid #DE195C;
+  background-color: transparent;
+  color: #DE195C;
+  font-weight: 500;
+  padding: 0.3rem;
+  transition-duration: 3ms;
+  border-radius: 5px;
+}
+
+.card div button:hover{
+  border: none;
+  background-color: white;
+  color: #DE195C;
+  border: #DE195C;
+  font-weight: 700;
+}
+
+.card h5{
+  
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.card .price{
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.card .location{
+  font-weight: 500;
+}
+
+.card:hover{
+ border: 3px solid #DE195C;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+/* Login page design */
+.box{
+  width: 70%;
+  height: 70vh;
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.img img{
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardheading{
+  margin-top: 6rem;
+ text-align: center;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.cardheading span{
+  color: #DE195C;
+}
+
+.img{
+  width: 45%;
+}
+
+.dataintake{
+  padding: 4rem;
+  width: 55%;
+}
+
+.boxbtn{
+  margin-top: 1rem;
+  width: 120px;
+  height: 40px;
+  background-color: #DE195C;
+  color: white;
+  border: none;
+  font-weight: 700;
+}
+
+.boxbtn:hover{
+  background-color: white;
+  border: 3px solid #DE195C;
+  color: #DE195C;
+}
+
+.notauser{
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.notauser a{
+  text-decoration: none;
+  color: #DE195C;
+}
+
+.notauser a:hover{
+  text-decoration: underline;
+}
+
+.mb-3 label{
+  font-weight: 500;
+}
+
+/* Signup page design */
+.height{
+  height: max-content;
+}
+
+.col-md-10 label, .col-md-5 label{
+  font-weight: 500;
+}
+
+/* Show page css */
+
+
+.titleheading{
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 6rem;
+  font-weight: 600;
+}
+
+.text{
+  font-size: 1.3rem;
+}
+
+.btns{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  font-size: 1rem;
+}
+
+.ownedBy{
+  display: flex;
+  width: max-content;
+  height: 130px;
+  background-color: #ecf1f4;
+  padding: 1rem;
+}
+
+.ownerImage{
+  width: 50%;
+}
+
+.ownerImage img{
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.ownerinfo{
+  font-size: 1rem;
+  display: inline;
+  padding-left: 1rem;
+}
+
+.ownerinfo p{
+  margin: 0;
+}
+
+.ownername{
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.postedby{
+  font-weight: 600;
+}
+
+/* aboutus page */
+.aboutus{
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #2C3A56;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  margin-bottom: 2rem;
+}
+
+.aboutusimages{
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.left{
+  width: 60%;
+  height: 100%;
+}
+
+.left img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right img{
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.right{
+  width: 40%;
+  height: 100%;
+}
+
+.aboutus p,.aboutus ul li{
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.aboutus h4{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.aboutus h4 span{
+  color: #DE195C;
+}
+
+/* Dashboard route */
+.profilepic,.userinfo{
+  background-color: white;
+  width: 70%;
+  height: max-content;
+  margin: 1rem;
+}
+
+.profilepic,.dashboard{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+.profilepic img{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 5px solid #DE195C;
+  margin: 1rem;
+}
+
+.userinfo{
+  padding: 1rem;
+  
+}
+
+.userinfo h6{
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.profilepic p{
+  font-size: 2rem;
+}
+
+.editdashboard{
+  background-color: transparent;
+  border: none;
+}
+
+/* Editdashboard route */
+.padding{
+  padding: 3rem;
+  width: 60%;
+}
+
+/* contact us */
+.contactus{
+  margin: 0 auto;
+  width: 80%;
+  background-color: white;
+  display: flex;
+  padding: 3rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.form{
+  width: 50%;
+}
+
+.address{
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+.address p span{
+  font-weight: 600;
+}
+
+.socialmedia{
+  font-weight: 500;
+}
+
+.socialmedia i{
+  color: #DE195C;
+  margin: 0.6rem;
+  font-size: 1.5rem;
+}

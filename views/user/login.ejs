@@ -1,0 +1,39 @@
+<% layout('layouts/boilerplate') %>
+
+<body>
+  <h1 class="cardheading">Login to <span> She </span>  Share</h1>
+    <div class="box">
+    
+  <div class="img">
+    <img src="../images/login.jpg" alt="">
+  </div>
+  <div class="dataintake">
+
+ 
+    <div class="col-10 ">
+        <form action="/login" method="post" class="needs-validation" novalidate>
+          
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" id="username" class="form-control" required>
+              </input>
+              
+              <div class="invalid-feedback">Please enter username</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" id="password" class="form-control" required>
+              </input>
+              
+              <div class="invalid-feedback">Please enter password</div>
+              </div>
+
+              <button class="boxbtn">Login</button>
+
+              <p class="notauser">Not a user? <a class="link" href="/register"> Register Now </a></p>
+        </form>
+    </div>
+</div>
+</div>
+</body>

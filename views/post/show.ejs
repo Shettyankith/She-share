@@ -1,0 +1,39 @@
+<% layout("layouts/boilerplate") %>
+
+<body>
+    <h1 class="cardheading"><%= post.title %></h1>
+    <div class="box ">
+       <div class="img">
+        <img src="<%= post.image.url %>" alt="Room image">
+       </div>
+        <div class="dataintake text">
+        <p><%= post.description %></p>
+        <p>&#8377; <%= post.price %>/night</p>
+        <p><i class="fa-solid fa-location-dot"></i> <%= post.location %>, <%= post.country %></p>
+        <p class="postedby">Posted By</p>
+        <% if(post.ownedBy){ %>
+            <div class="ownedBy">
+                <div class="ownerImage">
+                    <img src="<%= post.ownedBy.profilePic.url %>" alt="pic">
+                </div>
+                <div class="ownerinfo">
+                    <p class="ownername"><%= post.ownedBy.username %></p>
+                    <p><%= post.ownedBy.currentLocation %></p>
+                </div>
+            </div>
+        <% } %>
+
+        <div class="btns">
+        <form action="/posts/<%= post._id %>/edit" method="get">
+            <button class="boxbtn">Edit  <i class="fa-solid fa-pen-to-square"></i></button>
+        </form>
+        <form action="/delete/<%= post._id %>?_method=DELETE" method="post">
+            <button class="boxbtn">Delete  <i class="fa-solid fa-trash"></i></button>
+        </form>
+        <form action="/booking/<%= post._id %>" method="get">
+            <button class="boxbtn">Book Now</button>
+        </form>
+    </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,39 @@
+<% layout("layouts/boilerplate") %>
+
+<body>
+    <h1 class="cardheading">Signup to <span>She</span> Share</h1>
+  <div class="box ">
+    <div class="img">
+      <img src="../images/booking.jpg" alt="">
+    </div>
+
+    <div class="dataintake">
+  <form action="/booking/<%= room._id %>" method="post"  novalidate
+    class="needs-validation">
+
+    <div class="mb-3 col-8">
+        <label for="roomId" class="form-label">Room ID:</label>
+    <input type="text" id="roomId" name="roomId"  value="<%= room._id %>" class="form-control"/>
+    <div class="invalid-feedback">Room id is must</div>
+        </div>
+    
+
+    <div class="mb-3 col-8">
+        <label for="checkInDate" class="form-label">Check-in Date:</label>
+        <input type="date" id="checkInDate" name="checkInDate"  class="form-control"/>
+        <div class="invalid-feedback">Please provide checkIn Date</div>
+    </div>
+    
+
+    <div class="mb-3 col-8">
+        <label for="checkOutDate" class="form-label">Check-out Date:</label>
+        <input type="date" id="checkOutDate" name="checkOutDate"  class="form-control"/>
+        <div class="invalid-feedback">Please provide checkOut  Date</div>
+    </div>
+    
+    <button class="boxbtn">Book Room   <i class="fa-regular fa-calendar-check"></i></button>
+  </form>
+  </div>
+</div>
+
+</body>

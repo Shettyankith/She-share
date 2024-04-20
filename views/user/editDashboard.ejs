@@ -1,0 +1,75 @@
+<% layout('layouts/boilerplate') %>
+
+<body>
+  <h1 class="cardheading">Edit  <span>Profile</span> </h1>
+  <div class="dashboard">
+    <div class="profilepic padding">
+      <img src="<%= currentUser.profilePic.url %>" alt="profile pic" />
+     
+    </div>
+
+    <div class="userinfo padding">
+      <form
+        action="/dashboard/edit?_method=PUT"
+        method="post"
+        enctype="multipart/form-data"
+        novalidate
+        class="row g-3 needs-validation "
+      >
+        <div class="col-md-10">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" name="username" required class="form-control" value="<%= currentUser.username %>" />
+        </div>
+
+        <div class="col-md-10">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" name="email" required class="form-control" value="<%= currentUser.email %>"/>
+        </div>
+
+        <div class="col-md-10">
+          <label for="pic" class="form-label">Profile Photo</label>
+          <input type="file" name="pic"  class="form-control" />
+          <p class="formatspecifier">Allowed formats are .png,.jpg,.jpeg</p>
+        </div>
+
+        <div class="row g-2">
+          <div class="col-md-5">
+            <label for="age" class="form-label">Age</label>
+            <input type="number" name="age" required class="form-control" value="<%= currentUser.age %>"/>
+          </div>
+
+          <div class="col-md-5">
+            <label for="currentLocation" class="form-label"> Current Location</label>
+            <input type="text" name="currentLocation" required class="form-control" value="<%= currentUser.currentLocation %>"/>
+          </div>
+        </div>
+
+        <div class="col-md-10">
+          <label for="story" class="form-label">Describe yourself</label>
+          <textarea name="story" id="story" cols="10" rows="3" class="form-control" ><%= currentUser.story %></textarea>
+        </div>
+
+        <div class="col-md-10">
+            <label for="hobbies" class="form-label">Hobbies</label>
+            <input type="text" name="hobbies" required class="form-control" value="<%= currentUser.hobbies %>"/>
+        </div>
+        
+        <div class="col-md-10">
+          <label for="password" class="form-label" >Password</label>
+          <input
+            type="password"
+            name="password"
+            required
+            class="form-control"
+            value="<%= currentUser.password %>"
+          />
+          <p>If not changing please re-enter the same password</p>
+        </div>
+
+        <div class="col-md-10">
+          <button class="boxbtn"><i style="padding-right: 5px;" class="fa-regular fa-square-check"></i> Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

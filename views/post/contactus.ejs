@@ -1,0 +1,50 @@
+<% layout("layouts/boilerplate") %>
+
+<body>
+    <h1 class="cardheading">Contact <span> Us </span> </h1>
+  <div class="contactus">
+    <div class="form">
+      <form
+        action="/contactus"
+        method="post"
+        novalidate
+        class="needs-validation"
+      >
+        <div class="col-12">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" name="name" class="form-control" required />
+          <div class="invalid-feedback">Please provide your name</div>
+        </div>
+
+        <div class="col-12">
+          <label for="email" class="form-label">Email</label>
+          <input type="text" name="email" class="form-control" required />
+          <div class="invalid-feedback">Provide your email addrres</div>
+        </div>
+
+        <div class="col-12">
+          <label for="message" class="form-label">Message</label>
+          <textarea name="message" class="form-control" required cols="5" rows="4"></textarea>
+          <div class="invalid-feedback">Type your message</div>
+        </div>
+
+        <button class="boxbtn">
+          Send </i>
+        </button>
+      </form>
+    </div>
+
+    <div class="address">
+        <p><span>Company Name:</span> She Share </p>
+        <p><span>Email Address: </span>  sheshare@gmail.com</p>
+        <p><span>Address: </span>  2nd Street Koramangla main street, Banagalore, Karnataka -507335</p>
+        <div class="socialmedia">
+            <p>Follow us on</p>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+    </div>
+  </div>
+</body>

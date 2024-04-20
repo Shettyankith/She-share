@@ -1,0 +1,21 @@
+<% layout("layouts/boilerplate") %>
+
+<body>
+    <div class="allposts">
+    <% for (post of allPosts){ %>
+        <div class="card">
+        <div class="image">
+            <img src="<%= post.image.url %>" alt="room photo">
+        </div>
+        <h5><%= post.title %></h5>
+        <p class="price">&#8377;<%= post.price %> /night</p>
+        <p class="location"><%= post.location %>,<%= post.country %></p>
+        <div>
+            <form action="/posts/<%= post._id %>" method="get">
+                <button>Show More <i style="padding-left: 5px;"  class="fa-solid fa-caret-right"></i></button>
+            </form>
+        </div>
+        </div>
+    <% } %>
+    </div>
+</body>
