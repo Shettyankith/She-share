@@ -20,6 +20,7 @@ const LocalStrategy = require("passport-local");
 const session = require("express-session");
 const { isLoggedIn ,redirectUrl} = require("./middleware.js");
 const Contact = require("./models/contact.js");
+const flash = require("connect-flash");
 
 const sessionOptions = {
   secret: "secretcode",
@@ -40,10 +41,14 @@ app.use(methodOverride("_method"));
 app.use(session(sessionOptions));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 app.use((req, res, next) => {
+  res.locals.success = req.flash("success");
+  res.locals.failure = req.flash("failure");
+  res.locals.warning = req.flash("warning");
   res.locals.currentUser = req.user;
   next();
 });
@@ -112,7 +117,9 @@ app.delete("/delete/:id", async (req, res) => {
   let id = req.params.id;
   await Post.findByIdAndDelete(id);
   console.log("Post deleted");
+  req.flash("success","Room delails deleted successfully");
   res.redirect("/posts");
+
 });
 
 // Home route
@@ -140,11 +147,11 @@ app.get("/booking/:id", isLoggedIn, async (req, res) => {
   res.render("booking/book.ejs", { room });
 });
 
-app.post("/booking/:id", async (req, res) => {
+app.post("/booking/:id", isLoggedIn,async (req, res) => {
   try {
     let id = req.params.id;
     let booking = new Booking(req.body);
-
+    booking.userId=req.user;
     // if checkout date is before checkin date
     if (booking.checkOutDate < booking.checkInDate) {
       return res
@@ -182,6 +189,25 @@ app.post("/booking/:id", async (req, res) => {
   }
 });
 
+// Booking cancellation route
+app.post("/cancel-booking/:bookingId", isLoggedIn, async (req, res) => {
+  try {
+    const bookingId = req.params.bookingId;
+    const booking = await Booking.findById(bookingId);
+    if (!booking) {
+      return res.status(404).send("Booking not found");
+    }
+    booking.roomStatus = "Available";
+    await booking.save();
+    await Booking.deleteOne({ _id: bookingId });
+    res.redirect("/dashboard")
+  } catch (error) {
+    console.error("Error cancelling booking:", error);
+    res.status(500).send("Error cancelling booking");
+  }
+});
+
+
 // User Routes
 app.get("/register", (req, res) => {
   res.render("user/register.ejs");
@@ -211,7 +237,8 @@ app.post(
   "/login",redirectUrl,
   passport.authenticate("local", { failureRedirect: "/login" }),
   async (req, res) => {
-    let url = res.locals.redirectUrl || "/home"; // Corrected line
+    let url = res.locals.redirectUrl || "/home"; 
+    req.flash("success",`Welocome back ${req.user.username}`);
     res.redirect(url);
   }
 );
@@ -236,7 +263,8 @@ app.post("/rooms/:location", async (req, res) => {
 // Dasboard
 app.get("/dashboard", isLoggedIn, async (req, res) => {
   let user = req.user;
-  res.render("user/dashboard.ejs", { user });
+  let bookedRooms = await Booking.find({ userId: user._id }).populate('roomId');
+  res.render("user/dashboard.ejs", { user,bookedRooms });
 });
 
 app.get("/dashboard/edit", isLoggedIn, (req, res) => {

@@ -1,4 +1,4 @@
-<% layout("layouts/boilerplate") %>
+<% layout("layouts/homeboilerplate") %>
 
 <body>
   <div class="intro">
@@ -17,40 +17,5 @@
         </div>
     </div>
   </div>
-    <!-- <div class="roombuttons">
-       <div>
-        <form action="/posts" method="get">
-          <button>Rent a room</button>
-      </form>
-       </div>
-        <div>
-          <form action="/newpost" method="get">
-            <button>Share a room</button>
-        </form>
-        </div>
-    </div> -->
-    <!-- <div class="locations">
-        <div class="location-card" data-location="New York">New York</div>
-        <div class="location-card" data-location="London">London</div>
-        <div class="location-card" data-location="Paris">Paris</div>
-      </div>
-      <script>
-        document.addEventListener('DOMContentLoaded', async () => {
-          const locations = document.querySelectorAll('.location-card');
-        
-          locations.forEach(location => {
-            location.addEventListener('click', async () => {
-              const locationName = location.dataset.location;
-        
-              try {
-                // Send HTTP request to backend API to fetch available rooms for the selected location
-                await fetch(`/rooms/${locationName}`);
-              } catch (error) {
-                console.error('Error fetching rooms:', error);
-              }
-            });
-          });
-        });
-        </script> -->
-        
+   
 </body>
