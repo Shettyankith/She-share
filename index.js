@@ -181,7 +181,7 @@ app.post("/booking/:id", isLoggedIn,async (req, res) => {
     } else {
       booking.roomStatus = "Booked"; 
       await booking.save();
-      return res.send("Room Booked");
+      res.redirect("/dashboard");
     }
   } catch (error) {
     console.error("Error creating booking:", error);
@@ -238,7 +238,6 @@ app.post(
   passport.authenticate("local", { failureRedirect: "/login" }),
   async (req, res) => {
     let url = res.locals.redirectUrl || "/home"; 
-    req.flash("success",`Welocome back ${req.user.username}`);
     res.redirect(url);
   }
 );
