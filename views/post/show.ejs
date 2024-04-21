@@ -22,7 +22,7 @@
                 </div>
             </div>
         <% } %>
-        <% if(post.ownedBy.toString() === currentUser.toString()) { %>
+        <% if(currentUser &&  post.ownedBy.toString() === currentUser.toString()) { %>
         <div class="btns">
         <form action="/posts/<%= post._id %>/edit" method="get">
             <button class="boxbtn">Edit  <i class="fa-solid fa-pen-to-square"></i></button>
