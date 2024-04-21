@@ -22,7 +22,7 @@
                 </div>
             </div>
         <% } %>
-
+            <% if(post.ownedBy==currentUser) {%>
         <div class="btns">
         <form action="/posts/<%= post._id %>/edit" method="get">
             <button class="boxbtn">Edit  <i class="fa-solid fa-pen-to-square"></i></button>
@@ -30,9 +30,11 @@
         <form action="/delete/<%= post._id %>?_method=DELETE" method="post">
             <button class="boxbtn">Delete  <i class="fa-solid fa-trash"></i></button>
         </form>
+        <% }else { %>
         <form action="/booking/<%= post._id %>" method="get">
             <button class="boxbtn">Book Now</button>
         </form>
+        <% } %>
     </div>
         </div>
     </div>

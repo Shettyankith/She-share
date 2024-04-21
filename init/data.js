@@ -10,6 +10,7 @@ const samplePosts = [
       price: 1500,
       location: "Malibu",
       country: "United States",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Modern Loft in Downtown",
@@ -22,6 +23,7 @@ const samplePosts = [
       price: 1200,
       location: "New York City",
       country: "United States",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Mountain Retreat",
@@ -34,6 +36,7 @@ const samplePosts = [
       price: 1000,
       location: "Aspen",
       country: "United States",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Historic Villa in Tuscany",
@@ -46,6 +49,7 @@ const samplePosts = [
       price: 2500,
       location: "Florence",
       country: "Italy",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Secluded Treehouse Getaway",
@@ -58,6 +62,7 @@ const samplePosts = [
       price: 800,
       location: "Portland",
       country: "United States",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Beachfront Paradise",
@@ -70,6 +75,7 @@ const samplePosts = [
       price: 2000,
       location: "Cancun",
       country: "Mexico",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Rustic Cabin by the Lake",
@@ -82,6 +88,7 @@ const samplePosts = [
       price: 900,
       location: "Lake Tahoe",
       country: "United States",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Luxury Penthouse with City Views",
@@ -94,6 +101,7 @@ const samplePosts = [
       price: 3500,
       location: "Los Angeles",
       country: "United States",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Ski-In/Ski-Out Chalet",
@@ -106,6 +114,7 @@ const samplePosts = [
       price: 3000,
       location: "Verbier",
       country: "Switzerland",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Safari Lodge in the Serengeti",
@@ -118,6 +127,7 @@ const samplePosts = [
       price: 4000,
       location: "Serengeti National Park",
       country: "Tanzania",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Historic Canal House",
@@ -130,6 +140,7 @@ const samplePosts = [
       price: 1800,
       location: "Amsterdam",
       country: "Netherlands",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Private Island Retreat",
@@ -142,6 +153,7 @@ const samplePosts = [
       price: 10000,
       location: "Fiji",
       country: "Fiji",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Charming Cottage in the Cotswolds",
@@ -154,6 +166,7 @@ const samplePosts = [
       price: 1200,
       location: "Cotswolds",
       country: "United Kingdom",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Historic Brownstone in Boston",
@@ -166,6 +179,7 @@ const samplePosts = [
       price: 2200,
       location: "Boston",
       country: "United States",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Beachfront Bungalow in Bali",
@@ -178,6 +192,7 @@ const samplePosts = [
       price: 1800,
       location: "Bali",
       country: "Indonesia",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Mountain View Cabin in Banff",
@@ -190,6 +205,7 @@ const samplePosts = [
       price: 1500,
       location: "Banff",
       country: "Canada",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Art Deco Apartment in Miami",
@@ -202,6 +218,7 @@ const samplePosts = [
       price: 1600,
       location: "Miami",
       country: "United States",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Tropical Villa in Phuket",
@@ -214,6 +231,7 @@ const samplePosts = [
       price: 3000,
       location: "Phuket",
       country: "Thailand",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Historic Castle in Scotland",
@@ -226,6 +244,7 @@ const samplePosts = [
       price: 4000,
       location: "Scottish Highlands",
       country: "United Kingdom",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Desert Oasis in Dubai",
@@ -238,6 +257,7 @@ const samplePosts = [
       price: 5000,
       location: "Dubai",
       country: "United Arab Emirates",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Rustic Log Cabin in Montana",
@@ -250,6 +270,7 @@ const samplePosts = [
       price: 1100,
       location: "Montana",
       country: "United States",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Beachfront Villa in Greece",
@@ -262,6 +283,7 @@ const samplePosts = [
       price: 2500,
       location: "Mykonos",
       country: "Greece",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Eco-Friendly Treehouse Retreat",
@@ -274,6 +296,7 @@ const samplePosts = [
       price: 750,
       location: "Costa Rica",
       country: "Costa Rica",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Historic Cottage in Charleston",
@@ -286,6 +309,7 @@ const samplePosts = [
       price: 1600,
       location: "Charleston",
       country: "United States",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Modern Apartment in Tokyo",
@@ -298,6 +322,7 @@ const samplePosts = [
       price: 2000,
       location: "Tokyo",
       country: "Japan",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Lakefront Cabin in New Hampshire",
@@ -310,6 +335,7 @@ const samplePosts = [
       price: 1200,
       location: "New Hampshire",
       country: "United States",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Luxury Villa in the Maldives",
@@ -322,6 +348,7 @@ const samplePosts = [
       price: 6000,
       location: "Maldives",
       country: "Maldives",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Ski Chalet in Aspen",
@@ -334,6 +361,7 @@ const samplePosts = [
       price: 4000,
       location: "Aspen",
       country: "United States",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
     {
       title: "Secluded Beach House in Costa Rica",
@@ -346,6 +374,7 @@ const samplePosts = [
       price: 1800,
       location: "Costa Rica",
       country: "Costa Rica",
+      ownedBy: "662334e5d948ce168d4fef29",
     },
   ];
   
