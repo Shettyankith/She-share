@@ -1,60 +1,61 @@
 <% layout("layouts/boilerplate") %>
 <% success %>
 
-  <body>
-    <h1 class="cardheading">Share your <span> Room </span> </h1>
-    <div class="box height">
+<body>
+  <h1 class="cardheading">Share your <span> Room </span> </h1>
+  <div class="box height">
     
-      <div class="img">
-        <img src="../images/newpost.jpg" alt="">
-      </div>
-      <div class="dataintake">
+    <div class="img">
+      <img src="../images/newpost.jpg" alt="">
+    </div>
+    <div class="dataintake">
       <div class="col-12 ">
         <form action="/newpost" method="post" class="needs-validation" novalidate  enctype="multipart/form-data" >
+
           <div class="mb-3">  
             <label for="title" class="form-label">Title</label>
             <input type="text" name="title" placeholder="Add a catchy title" class="form-control" required>
-          </input>
-          <div class="valid-feedback">This Looks Good!</div>
+            </input>
+            <div class="valid-feedback">This Looks Good!</div>
           </div>
 
-          <div class="mb-3">
-            <label for="description" class="form-label">Description</label>
-            <textarea  name="description" class="form-control" required></textarea>
-            <div class="invalid-feedback">Please enter a short description</div>
-          </div>
-
-          <div class="mb-3">
-            <label for="image" class="form-label">Upload Image</label>
-            <input type="file"  class="form-control"  name="image" >
-            <p class="formatspecifier">Allowed formats are .png,.jpg,.jpeg</p>
-          </div>
-
-          <div class="row">
-            <div class="mb-3 col-md-4">
-              <label for="price" class="form-label">Price</label>
-              <input type="text"  class="form-control" placeholder="1200" name="price" required>
-              <div class="invalid-feedback">Price should be valid</div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea  name="description" class="form-control" required></textarea>
+              <div class="invalid-feedback">Please enter a short description</div>
             </div>
 
-            <div class="mb-3 col-md-8">
-              <label for="country" class="form-label">Country</label>
-              <input type="text" class="form-control" placeholder="India" name="country" required>
-              <div class="invalid-feedback">Please enter country name</div>
+            <div class="mb-3">
+              <label for="image" class="form-label">Upload Image</label>
+              <input type="file"  class="form-control"  name="image" >
+              <p class="formatspecifier">Allowed formats are .png,.jpg,.jpeg</p>
             </div>
-          </div>
+
+            <div class="row">
+              <div class="mb-3 col-md-4">
+                <label for="price" class="form-label">Price</label>
+                <input type="text"  class="form-control" placeholder="1200" name="price" required>
+                <div class="invalid-feedback">Price should be valid</div>
+              </div>
+
+              <div class="mb-3 col-md-8">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" class="form-control" placeholder="India" name="country" required>
+                <div class="invalid-feedback">Please enter country name</div>
+              </div>
+            </div>
 
 
-          <div class="mb-3">
-            <label for="location" class="form-label">Location</label>
-            <input type="text" class="form-control" placeholder="Jaipur Rajasthan" name="location" required>
-            <div class="invalid-feedback">Please enter location</div>
-          </input>
+            <div class="mb-3">
+              <label for="location" class="form-label">Location</label>
+              <input type="text" class="form-control" placeholder="Jaipur Rajasthan" name="location" required>
+              <div class="invalid-feedback">Please enter location</div>
+              </input>
 
-          <button class="boxbtn">Add <i style="padding-right: 7px;" class="fa-regular fa-circle-check"></i></button>
-          <div><br><br>
+              <button class="boxbtn">Add <i style="padding-right: 7px;" class="fa-regular fa-circle-check"></i></button>
+            </div><br><br>
         </form>
       </div>
     </div>
   </div>
-  </body>
+</body>

@@ -3,7 +3,7 @@ const initData=require("../init/data.js");
 const Post=require("../models/post.js");
 
 async function main(){
-    await mongoose.connect("mongodb://127.0.0.1:27017/airbnb");
+    await mongoose.connect("mongodb+srv://shettyankith:1su21cs012@cluster0.lqqy6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
 }
 
 main().then(()=>{

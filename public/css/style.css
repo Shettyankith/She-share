@@ -90,6 +90,7 @@ body {
   align-items: center;
   margin-top: 6rem;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -180,12 +181,15 @@ body {
   color: white;
   border: none;
   font-weight: 700;
+  transition: all 0.3s ease;
 }
 
 .boxbtn:hover{
   background-color: white;
   border: 3px solid #DE195C;
   color: #DE195C;
+  transform: scale(1.05); 
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .notauser{
@@ -418,6 +422,7 @@ body {
   background-color: white;
   display: flex;
   padding: 3rem;
+  margin-bottom: 2rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -436,6 +441,14 @@ body {
 
 .socialmedia{
   font-weight: 500;
+  transition: all;
+  animation: ease-in-out;
+}
+
+.socialmedia i:hover{
+  cursor: pointer;
+  color:black
+  
 }
 
 .socialmedia i{
